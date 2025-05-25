@@ -1,0 +1,360 @@
+<!DOCTYPE html> 
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Relatório de Análise IDEP - CEU EMEF Paraisópolis</title>
+    <style>
+        /* Ajustes de formatação para maior elegância e clareza visual */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+    font-family: 'Inter', Arial, sans-serif;
+    line-height: 1.7;
+    color: #23272f;
+    background: #f4f6fa;
+}
+
+.container {
+    max-width: 210mm;
+    margin: 0 auto;
+    padding: 18mm 12mm 18mm 12mm;
+    background: #fff;
+    box-shadow: 0 0 24px rgba(30,64,175,0.08);
+    border-radius: 12px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 38px;
+    padding-bottom: 18px;
+    border-bottom: 3px solid #2563eb;
+    background: #e0e7ff;
+    border-radius: 12px 12px 0 0;
+}
+
+.header h1 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #1e40af;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.header .subtitle {
+    font-size: 15px;
+    color: #475569;
+    font-weight: 500;
+}
+
+.section {
+    margin-bottom: 32px;
+    padding: 24px 18px 18px 18px;
+    background: #f8fafc;
+    border-radius: 8px;
+    border-left: 5px solid #2563eb;
+    box-shadow: 0 2px 8px rgba(30,64,175,0.04);
+}
+
+.section h2 {
+    font-size: 19px;
+    font-weight: 600;
+    color: #1e40af;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #c7d2fe;
+    padding-bottom: 5px;
+    background: #e0e7ff;
+    border-radius: 6px 6px 0 0;
+}
+
+.section h3 {
+    font-size: 15px;
+    font-weight: 600;
+    color: #374151;
+    margin-bottom: 10px;
+    margin-top: 18px;
+}
+
+.section p {
+    margin-bottom: 10px;
+    text-align: justify;
+    font-size: 13.5px;
+    line-height: 1.75;
+}
+
+.highlight-box {
+    background: #fef3c7;
+    border: 1px solid #f59e0b;
+    border-radius: 6px;
+    padding: 13px 18px;
+    margin: 18px 0;
+}
+
+.highlight-box p {
+    margin: 0;
+    color: #92400e;
+    font-weight: 500;
+}
+
+.data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 18px 0;
+    font-size: 13px;
+    background: #fff;
+    border-radius: 6px;
+    overflow: hidden;
+    box-shadow: 0 1px 4px rgba(30,64,175,0.04);
+}
+
+.data-table th {
+    background: #1e40af;
+    color: white;
+    padding: 10px 7px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.data-table td {
+    padding: 8px 7px;
+    border-bottom: 1px solid #e2e8f0;
+}
+
+.data-table tr:nth-child(even) {
+    background: #f8fafc;
+}
+
+.data-table tr:hover {
+    background: #e0e7ff;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    margin: 22px 0 8px 0;
+}
+
+.image img {
+    max-width: 80%;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(30,64,175,0.10);
+    border: 1.5px solid #e3e6f3;
+}
+
+.conclusion-box {
+    background: #fee2e2;
+    border: 1px solid #fca5a5;
+    border-radius: 8px;
+    padding: 18px 18px 12px 18px;
+    margin: 22px 0;
+}
+
+.conclusion-box h2 {
+    color: #dc2626;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.conclusion-box p {
+    color: #7f1d1d;
+    margin-bottom: 8px;
+}
+
+.footer {
+    margin-top: 32px;
+    padding-top: 16px;
+    border-top: 1px solid #e2e8f0;
+    text-align: center;
+    font-size: 12px;
+    color: #64748b;
+}
+
+.print-button {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #2563eb;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    z-index: 1000;
+}
+
+.print-button:hover {
+    background: #1d4ed8;
+}
+
+@media print {
+    body {
+        font-size: 12px;
+        background: #fff;
+    }
+    .container {
+        box-shadow: none;
+        padding: 10mm;
+        border-radius: 0;
+    }
+    .section {
+        margin-bottom: 18px;
+        box-shadow: none;
+        border-radius: 0;
+    }
+    .image img {
+        max-width: 98%;
+        box-shadow: none;
+        border: 1px solid #bbb;
+    }
+    .header, .section h2 {
+        background: none;
+        border-radius: 0;
+    }
+    .print-button {
+        display: none;
+    }
+}
+    </style>
+</head>
+<body>
+    <button class="print-button" onclick="window.print()">Gerar PDF</button>
+    
+    <div class="container">
+        <div class="header">
+            <h1>Breve análise do IDEP e os critérios para avaliação da Gestão da CEU EMEF Paraisópolis</h1>
+            <div class="subtitle">Falácia da gestão municipal e incoerência na utilização dos indicadores</div>
+        </div>
+        
+        <div class="section">
+            <h2>Contexto da Convocação</h2>
+            <p>Na última quarta-feira, 21/05, a diretora da nossa Unidade Educacional, CEU EMEF Paraisópolis, recebeu uma convocação para conversa com a Diretora Regional de Educação, até aquele momento sem assunto definido. Ao longo do dia 22/05 começou a circular o discurso que outros diretores da cidade também haviam sido convocados e a conversa se tratava de um comunicado informando que os Diretores das referidas Unidades teriam de fazer um curso, devido ao baixo índice de suas unidades no IDEB no ano de 2023.</p>
+            
+            <p>A informação que circulou mencionava um afastamento do cargo e a indicação de mais um servidor para "apoio" à Unidade. No final da própria quinta-feira, nossa diretora voltou da reunião e confirmou o teor da conversa. No entanto, informou que na conversa não foi mencionado o afastamento e que, como nossa unidade não possui índice do IDEB do ano de 2023, foi utilizado o IDEP do mesmo ano.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Sobre o IDEP</h2>
+            <div class="highlight-box">
+                <p>O Índice de Desenvolvimento da Educação Paulistana (IDEP) avalia o desempenho das escolas e dos estudantes da Rede Municipal de Ensino de São Paulo. É calculado pela SME com base nas taxas de aprovação e nos resultados da Provinha e da Prova São Paulo, considerando também fatores como Nível Socioeconômico (INSE) e Índice de Complexidade de Gestão (ICG). Sua proposta é similar ao IDEB, mas utiliza dados municipais em vez dos do SAEB.</p>
+            </div>
+            <p><em>Fonte: Site IDEP - educacao.sme.prefeitura.sp.gov.br/idep/</em></p>
+        </div>
+        
+        <div class="section">
+            <h2>Considerações sobre os Critérios para Convocação</h2>
+            <p>No site dos dados abertos da PMSP (dados.prefeitura.sp.gov.br/dataset/idep) estão os resultados dos anos de 2018 a 2024. Para essa análise optamos por considerar apenas os dados de 2022 a 2024 (período pós-pandemia). Ao contrário do IDEB, já possuímos os resultados do IDEP de 2024, portanto, para o afastamento de um diretor ou diretora em 2025 seria prudente considerar os índices do ano anterior.</p>
+            
+            <p>Observando a lista das unidades que tiveram seus gestores convocados, muitas delas não tiveram índice no IDEB de 2023, especialmente nos anos finais. De maneira extraoficial circularam informações que outros critérios foram considerados, como tempo do Diretor(a) no cargo, porém nenhum desses critérios foi devidamente explicado.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Análise dos Índices</h2>
+            
+            <h3>Anos Finais - IDEP 2023</h3>
+            <p>A unidade não possuía índice do IDEB do ano de 2023 e para avaliação do trabalho da diretora foram utilizados os dados do IDEP do mesmo ano. Nos anos finais, o IDEP da unidade foi de 3.5 e a Unidade ficou entre os 124 índices mais baixos da cidade.</p>
+            
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Escola</th>
+                        <th>Distrito</th>
+                        <th>IDEP Anos Finais</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>124</td>
+                        <td>CEU EMEF PARAISÓPOLIS</td>
+                        <td>Vila Andrade</td>
+                        <td>3.5</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Anos Iniciais - IDEB 2023</h3>
+            <p>Se olharmos para o IDEB de 2023 para os anos iniciais, observamos a unidade entre os 43 índices mais baixos. Ainda bem longe do número de unidades que a gestão julgou necessária a intervenção.</p>
+            
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Posição</th>
+                        <th>Escola</th>
+                        <th>Distrito</th>
+                        <th>IDEB Anos Iniciais</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>43</td>
+                        <td>CEU EMEF PARAISÓPOLIS</td>
+                        <td>Vila Andrade</td>
+                        <td>5.1</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <p>Dessa forma, a não ser que existam outros critérios não mencionados pela gestão municipal, o uso desses índices não justificaria a entrada da unidade na referida lista.</p>
+        </div>
+        
+        <div class="section">
+            <h2>Análise Detalhada dos Indicadores</h2>
+            <p>Ao analisarmos mais profundamente o IDEP, temos algumas observações bem relevantes que denotam o quanto a gestão municipal mostra ineficácia, mesmo no uso arbitrário dos índices como ferramenta para avaliação do trabalho dos gestores.</p>
+            
+            <h3>Evolução Temporal</h3>
+            <p>O IDEP da unidade seguiu uma linha de avanço nos últimos anos, acompanhando a rede como um todo.</p>
+            
+            <div class="image">
+                <img src="evolucao.png" alt="Evolução IDEP ao longo dos anos - Tendência de crescimento">
+            </div>
+            
+            <h3>Comparação com a Rede Municipal</h3>
+            <p>Em comparação com a média das demais Unidades Educacionais, a Unidade apresentou um avanço maior que a rede nos IDEP dos anos iniciais, indicador que apresentava maior fragilidade em 2023.</p>
+            <div class="image">
+                <img src="porcentagem.png" alt="Comparação IDEP - Unidade vs. Média da Rede">
+            </div>
+            
+            <h3>Comparação Territorial</h3>
+            <p>Se isolarmos a comparação às Unidades do Distrito da Vila Andrade, Unidades que atendem a população de Paraisópolis, podemos constatar ainda mais incoerência na decisão da gestão municipal.</p>
+            <div class="image">
+                <img src="anos_finais_andrade_2024.png" alt="Comparação com unidades do distrito Vila Andrade - Anos Finais">
+            </div>
+            <p><strong>Em 2024, a Unidade teve o maior índice entre as Unidades da Vila Andrade considerando os anos finais.</strong></p>
+            <div class="image">
+                <img src="anos_iniciais_andrade_2024.png" alt="Comparação com unidades do distrito Vila Andrade - Anos Iniciais">
+            </div>
+            <p> <strong>Já para os anos iniciais, a Unidade se manteve na média, em comparação às demais unidades do território.</strong></p>
+        </div>
+        
+        <div class="section">
+            <h2>Limitações dos Indicadores</h2>
+            <p>Ressaltamos que consideramos temerário o uso de índices arbitrários para avaliação do trabalho de um gestor, especialmente o IDEP que tem seu maior indicador nos dados da Prova São Paulo. Não precisamos dizer o quanto é deficitária a estrutura para aplicação da avaliação, seja ela digital ou física.</p>
+            
+            <p> Em 2024, por exemplo, a Unidade optou pela realização da avaliação física, após o fiasco da prova digital em 2023. Apesar dos significativos avanços em relação ao ano anterior, em 2024 ainda tivemos muitos problemas, desde a chegada tardia dos materiais, até a ausência do coordenador da aplicação contratado por SME em quase todos os dias de prova.</p>
+        </div>
+        
+        <div class="conclusion-box">
+            <h2>Conclusão</h2>
+            <p>Uma breve análise dos indicadores utilizados pela gestão municipal para justificar a suposta ineficácia da gestão são falhos e não justificam tal ação, em especial nessa unidade. Aliado a isso, os índices não consideram inúmeros fatores dificultadores no trabalho do gestor, desde grande número de rotatividade de servidores, haja vista que a Unidade possui o maior índice de Gratificação de Local de Trabalho - GLT, ausência de RH em todos os quadros, inclusive limpeza e diversos outros fatores que fazem o trabalho dos gestores extremamente desafiadores.</p>
+            
+            <p>A comparação arbitrária de indicadores não só é injusta, mas pouco contribui para o avanço das aprendizagens, pois não olha para os territórios de maneira específica e pressupõe condições de igualdade nas escolas.</p>
+            
+            <p>Para nós, só resta convicção que a suposta incompetência na análise dos indicadores por parte da gestão municipal esconde na realidade a necessidade de implantação, com urgência, da privatização, da maneira mais ampla possível. Ela começa na contratação de "empresa especializada" para formação dos gestores, gestão terceirizada nas escolas e finalmente a contratação de empresa para as aulas em si, modelo já implementado na saúde e na assistência social e que apresentou apenas retrocesso e ainda mais precariedade para o atendimento à população.</p>
+            
+            <p>Por fim, o debate sobre os indicadores, planos de meta usando frameworks da gestão ágil e a burocratização da formação dos gestores não se trata apenas de um erro de curso, e sim de um projeto maior que tem o único fim: o LUCRO.</p>
+        </div>
+        
+        <div class="highlight-box" style="background: #dbeafe; border: 1px solid #3b82f6;">
+            <p style="color: #1e40af; font-weight: 600;">📊 Análises Técnicas Disponíveis</p>
+            <p style="color: #1e40af; margin-top: 8px;">Veja as análises completas usando Python e visualizações de dados no repositório:</p>
+            <p style="color: #1e40af; margin-top: 8px;"><a href="https://github.com/Rjj18/analise_idep" style="color: #1d4ed8; text-decoration: underline;">https://github.com/Rjj18/analise_idep</a></p>
+        </div>
+        
+        <div class="footer">
+            <p>Análise elaborada com os dados da Plataforma de dados abertos | CEU EMEF Paraisópolis - Vila Andrade</p>
+        </div>
+    </div>
+</body>
+</html>
