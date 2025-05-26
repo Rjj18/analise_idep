@@ -1,276 +1,322 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Relatório de Análise IDEP - CEU EMEF Paraisópolis</title>
     <style>
         /* Ajustes de formatação para maior elegância e clareza visual */
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
 
-body {
-    font-family: 'Inter', Arial, sans-serif;
-    line-height: 1.7;
-    color: #23272f;
-    background: #f4f6fa;
-}
+        body {
+            font-family: 'Inter', Arial, sans-serif;
+            line-height: 1.7;
+            color: #23272f;
+            background: #f4f6fa;
+        }
 
-.container {
-    max-width: 210mm;
-    margin: 0 auto;
-    padding: 18mm 12mm 18mm 12mm;
-    background: #fff;
-    box-shadow: 0 0 24px rgba(30,64,175,0.08);
-    border-radius: 12px;
-}
+        .container {
+            max-width: 210mm;
+            margin: 0 auto;
+            padding: 18mm 12mm 18mm 12mm;
+            background: #fff;
+            box-shadow: 0 0 24px rgba(30, 64, 175, 0.08);
+            border-radius: 12px;
+        }
 
-.header {
-    text-align: center;
-    margin-bottom: 38px;
-    padding-bottom: 18px;
-    border-bottom: 3px solid #2563eb;
-    background: #e0e7ff;
-    border-radius: 12px 12px 0 0;
-}
+        .header {
+            text-align: center;
+            margin-bottom: 38px;
+            padding-bottom: 18px;
+            border-bottom: 3px solid #2563eb;
+            background: #e0e7ff;
+            border-radius: 12px 12px 0 0;
+        }
 
-.header h1 {
-    font-size: 26px;
-    font-weight: 700;
-    color: #1e40af;
-    margin-bottom: 8px;
-    letter-spacing: 0.5px;
-}
+        .header h1 {
+            font-size: 26px;
+            font-weight: 700;
+            color: #1e40af;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+        }
 
-.header .subtitle {
-    font-size: 15px;
-    color: #475569;
-    font-weight: 500;
-}
+        .header .subtitle {
+            font-size: 15px;
+            color: #475569;
+            font-weight: 500;
+        }
 
-.section {
-    margin-bottom: 32px;
-    padding: 24px 18px 18px 18px;
-    background: #f8fafc;
-    border-radius: 8px;
-    border-left: 5px solid #2563eb;
-    box-shadow: 0 2px 8px rgba(30,64,175,0.04);
-}
+        .section {
+            margin-bottom: 32px;
+            padding: 24px 18px 18px 18px;
+            background: #f8fafc;
+            border-radius: 8px;
+            border-left: 5px solid #2563eb;
+            box-shadow: 0 2px 8px rgba(30, 64, 175, 0.04);
+        }
 
-.section h2 {
-    font-size: 19px;
-    font-weight: 600;
-    color: #1e40af;
-    margin-bottom: 12px;
-    border-bottom: 2px solid #c7d2fe;
-    padding-bottom: 5px;
-    background: #e0e7ff;
-    border-radius: 6px 6px 0 0;
-}
+        .section h2 {
+            font-size: 19px;
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 12px;
+            border-bottom: 2px solid #c7d2fe;
+            padding-bottom: 5px;
+            border-radius: 6px 6px 0 0;
+            text-align: center;
+        }
 
-.section h3 {
-    font-size: 15px;
-    font-weight: 600;
-    color: #374151;
-    margin-bottom: 10px;
-    margin-top: 18px;
-}
+        .section h3 {
+            font-size: 15px;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 10px;
+            margin-top: 18px;
+        }
 
-.section p {
-    margin-bottom: 10px;
-    text-align: justify;
-    font-size: 13.5px;
-    line-height: 1.75;
-}
+        .section p {
+            margin-bottom: 10px;
+            text-align: justify;
+            font-size: 13.5px;
+            line-height: 1.75;
+        }
 
-.highlight-box {
-    background: #fef3c7;
-    border: 1px solid #f59e0b;
-    border-radius: 6px;
-    padding: 13px 18px;
-    margin: 18px 0;
-}
+        .highlight-box {
+            background: #fef3c7;
+            border: 1px solid #f59e0b;
+            border-radius: 6px;
+            padding: 13px 18px;
+            margin: 18px 0;
+        }
 
-.highlight-box p {
-    margin: 0;
-    color: #92400e;
-    font-weight: 500;
-}
+        .highlight-box p {
+            margin: 0;
+            color: #92400e;
+            font-weight: 500;
+        }
 
-.data-table {
-    width: 100%;
-    border-collapse: collapse;
-    margin: 18px 0;
-    font-size: 13px;
-    background: #fff;
-    border-radius: 6px;
-    overflow: hidden;
-    box-shadow: 0 1px 4px rgba(30,64,175,0.04);
-}
+        .data-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 18px 0;
+            font-size: 13px;
+            background: #fff;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: 0 1px 4px rgba(30, 64, 175, 0.04);
+        }
 
-.data-table th {
-    background: #1e40af;
-    color: white;
-    padding: 10px 7px;
-    text-align: left;
-    font-weight: 600;
-}
+        .data-table th {
+            background: #1e40af;
+            color: white;
+            padding: 10px 7px;
+            text-align: left;
+            font-weight: 600;
+        }
 
-.data-table td {
-    padding: 8px 7px;
-    border-bottom: 1px solid #e2e8f0;
-}
+        .data-table td {
+            padding: 8px 7px;
+            border-bottom: 1px solid #e2e8f0;
+        }
 
-.data-table tr:nth-child(even) {
-    background: #f8fafc;
-}
+        .data-table tr:nth-child(even) {
+            background: #f8fafc;
+        }
 
-.data-table tr:hover {
-    background: #e0e7ff;
-}
+        .data-table tr:hover {
+            background: #e0e7ff;
+        }
 
-.data-table caption {
-        font-weight: normal;
-        font-size: 12px;
-        color: #6b7280;
-        text-align: center;
-        caption-side: bottom; /* Move o caption para a parte inferior */
-        margin-top: 10px;
-        margin-bottom: 0;
-    }
+        .data-table caption {
+            font-weight: normal;
+            font-size: 12px;
+            color: #6b7280;
+            text-align: center;
+            caption-side: bottom;
+            /* Move o caption para a parte inferior */
+            margin-top: 10px;
+            margin-bottom: 0;
+        }
 
-.image {
-    display: flex;
-    justify-content: center;
-    margin: 22px 0 8px 0;
-}
+        .large-table {
+            font-size: 9px;
+            /* Reduz ainda mais o tamanho da fonte */
+        }
 
-.image img {
-    max-width: 80%;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(30,64,175,0.10);
-    border: 1.5px solid #e3e6f3;
-}
+        .large-table th,
+        .large-table td {
+            padding: 3px;
+            /* Reduz ainda mais o espaçamento */
+        }
 
-.conclusion-box {
-    background: #fee2e2;
-    border: 1px solid #fca5a5;
-    border-radius: 8px;
-    padding: 18px 18px 12px 18px;
-    margin: 22px 0;
-}
+        .large-table caption {
+            font-size: 8px;
+            /* Diminui o texto do caption */
+        }
 
-.conclusion-box h2 {
-    color: #dc2626;
-    margin-bottom: 8px;
-    font-size: 18px;
-}
+        .image {
+            display: flex;
+            justify-content: center;
+            margin: 22px 0 8px 0;
+        }
 
-.conclusion-box p {
-    color: #7f1d1d;
-    margin-bottom: 8px;
-}
+        .image img {
+            max-width: 80%;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(30, 64, 175, 0.10);
+            border: 1.5px solid #e3e6f3;
+        }
 
-.footer {
-    margin-top: 32px;
-    padding-top: 16px;
-    border-top: 1px solid #e2e8f0;
-    text-align: center;
-    font-size: 12px;
-    color: #64748b;
-}
+        .conclusion-box {
+            background: #fee2e2;
+            border: 1px solid #fca5a5;
+            border-radius: 8px;
+            padding: 18px 18px 12px 18px;
+            margin: 22px 0;
+        }
 
-.print-button {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    background: #2563eb;
-    color: white;
-    border: none;
-    padding: 12px 24px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    z-index: 1000;
-}
+        .conclusion-box h2 {
+            color: #dc2626;
+            margin-bottom: 8px;
+            font-size: 18px;
+        }
 
-.print-button:hover {
-    background: #1d4ed8;
-}
+        .conclusion-box p {
+            color: #7f1d1d;
+            margin-bottom: 8px;
+        }
 
-@media print {
-    body {
-        font-size: 12px;
-        background: #fff;
-    }
-    .container {
-        box-shadow: none;
-        padding: 10mm;
-        border-radius: 0;
-    }
-    .section {
-        margin-bottom: 18px;
-        box-shadow: none;
-        border-radius: 0;
-    }
-    .image img {
-        max-width: 98%;
-        box-shadow: none;
-        border: 1px solid #bbb;
-    }
-    .header, .section h2 {
-        background: none;
-        border-radius: 0;
-    }
-    .print-button {
-        display: none;
-    }
-}
+        .footer {
+            margin-top: 16px;
+            padding-top: 8px;
+            font-size: 10px;
+            color: #94a3b8;
+        }
+
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #2563eb;
+            color: white;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-weight: 600;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+        }
+
+        .print-button:hover {
+            background: #1d4ed8;
+        }
+
+        @media print {
+            body {
+                font-size: 12px;
+                background: #fff;
+            }
+
+            .container {
+                box-shadow: none;
+                padding: 10mm;
+                border-radius: 0;
+            }
+
+            .section {
+                margin-bottom: 18px;
+                box-shadow: none;
+                border-radius: 0;
+            }
+
+            .image img {
+                max-width: 98%;
+                box-shadow: none;
+                border: 1px solid #bbb;
+            }
+
+            .header,
+            .section h2 {
+                background: none;
+                border-radius: 0;
+            }
+
+            .print-button {
+                display: none;
+            }
+        }
     </style>
 </head>
+
 <body>
     <button class="print-button" onclick="window.print()">Gerar PDF</button>
-    
+
     <div class="container">
         <div class="header">
-            <h1>Breve análise do IDEP e os critérios para avaliação da Gestão da CEU EMEF Paraisópolis</h1>
+            <h1>Breve Análise dos Indicadores usados como critério para avaliação da Gestão da CEU EMEF Paraisópolis</h1>
             <div class="subtitle">Falácia da gestão municipal e incoerência na utilização dos indicadores</div>
         </div>
-        
+
         <div class="section">
             <h2>Contexto da Convocação</h2>
-            <p>Na última quarta-feira, 21 de maio, a diretora da nossa Unidade Educacional, CEU EMEF Paraisópolis, foi convocada para uma reunião com a Diretora Regional de Educação, até então sem a definição prévia do assunto a ser tratado.</p>
+            <p>Na última quarta-feira, 21 de maio, a diretora da nossa Unidade Educacional, CEU EMEF Paraisópolis, foi
+                convocada para uma reunião com a Diretora Regional de Educação, até então sem a definição prévia do
+                assunto a ser tratado.</p>
 
-<p>No decorrer do dia 22, começaram a circular informações de que outros diretores de unidades da cidade também haviam sido chamados e que a pauta da reunião seria a comunicação sobre a obrigatoriedade de participação em um curso, em razão dos baixos índices apresentados no IDEB de 2023.</p>
+            <p>Em 22 de maio, informações extraoficiais indicavam que outros diretores de unidades da cidade também
+                haviam sido convocados, com a pauta da reunião centrada na comunicação sobre a obrigatoriedade de
+                participação em um curso, justificada pelos baixos índices no IDEB de 2023.</p>
 
-<p>Dentre os comentários que se espalharam, constava ainda a possibilidade de afastamento dos diretores dessas unidades, bem como a indicação de um servidor adicional para prestar “apoio” às escolas.</p>
+            <p>Adicionalmente, especulava-se sobre a possibilidade de afastamento dos diretores dessas unidades e a
+                designação de um servidor suplementar para 'apoio' às escolas.</p>
 
-<p>Ao final da própria quinta-feira, nossa diretora retornou da reunião e confirmou o teor da conversa. No entanto, esclareceu que, em nenhum momento, foi mencionado qualquer afastamento do cargo. Além disso, como nossa unidade não possui índice do IDEB referente ao ano de 2023, foi utilizado como referência o IDEP desse mesmo ano para embasar a convocação.</p>
+            <p>Ao final da própria quinta-feira, nossa diretora retornou da reunião e confirmou o teor da conversa. No
+                entanto, esclareceu que, em nenhum momento, foi mencionado qualquer afastamento do cargo. Além disso,
+                como nossa unidade não possui índice do IDEB referente ao ano de 2023, foi utilizado como referência o
+                IDEP desse mesmo ano para embasar a convocação.</p>
         </div>
-        
+
         <div class="section">
             <h2>Sobre o IDEP</h2>
             <div class="highlight-box">
-                <p>O Índice de Desenvolvimento da Educação Paulistana (IDEP) avalia o desempenho das escolas e dos estudantes da Rede Municipal de Ensino de São Paulo. É calculado pela SME com base nas taxas de aprovação e nos resultados da Provinha e da Prova São Paulo, considerando também fatores como Nível Socioeconômico (INSE) e Índice de Complexidade de Gestão (ICG). Sua proposta é similar ao IDEB, mas utiliza dados municipais em vez dos do SAEB.</p>
+                <p>O Índice de Desenvolvimento da Educação Paulistana (IDEP) avalia o desempenho das escolas e dos
+                    estudantes da Rede Municipal de Ensino de São Paulo. Calculado pela SME, o IDEP baseia-se nas taxas
+                    de aprovação, nos resultados da Provinha e da Prova São Paulo, e incorpora fatores como o Nível
+                    Socioeconômico (INSE) e o Índice de Complexidade de Gestão (ICG).Sua proposta é similar ao IDEB, mas
+                    utiliza dados municipais em vez dos do SAEB.</p>
             </div>
             <p><em>Fonte: Site IDEP - educacao.sme.prefeitura.sp.gov.br/idep/</em></p>
         </div>
-        
+
         <div class="section">
             <h2>Considerações sobre os Critérios para Convocação</h2>
-            <p>No site dos <a href="http://dados.prefeitura.sp.gov.br/dataset" target="_blank">Dados Abertos da Prefeitura de São Paulo</a> estão disponíveis os resultados do IDEP referentes aos anos de 2018 a 2024.</p>
+            <p>No site dos <a href="http://dados.prefeitura.sp.gov.br/dataset" target="_blank">Dados Abertos da
+                    Prefeitura de São Paulo</a> estão disponíveis os resultados do IDEP referentes aos anos de 2018 a
+                2024.</p>
 
-<p>Para esta análise, optamos por considerar apenas os dados de 2022 a 2024, período que reflete o cenário pós-pandemia. Diferentemente do IDEB, já estão disponíveis os resultados do IDEP de 2024, o que permite que, para qualquer decisão de afastamento de diretores ou diretoras em 2025, seja mais adequado utilizar os índices do ano anterior como referência.</p>
+            <p>Para esta análise, optamos por considerar apenas os dados de 2022 a 2024, período que reflete o cenário
+                pós-pandemia. Diferentemente do IDEB, já estão disponíveis os resultados do IDEP de 2024, o que permite
+                que, para qualquer decisão de afastamento de diretores ou diretoras em 2025, seja mais adequado utilizar
+                os índices do ano anterior como referência.</p>
 
-<p>Ao observar a lista das unidades cujos gestores foram convocados, nota-se que muitas delas sequer possuem índice no IDEB de 2023, especialmente no que se refere aos anos finais. De forma extraoficial, circulou a informação de que outros critérios também teriam sido considerados, como o tempo de permanência do diretor ou da diretora no cargo, porém nenhum desses critérios foi oficialmente detalhado ou explicado.</p>
+            <p>Ao observar a lista das unidades cujos gestores foram convocados, nota-se que muitas delas sequer possuem
+                índice no IDEB de 2023, especialmente no que se refere aos anos finais. De forma extraoficial, circulou
+                a informação de que outros critérios também teriam sido considerados, como o tempo de permanência do
+                diretor ou da diretora no cargo, porém nenhum desses critérios foi oficialmente detalhado ou explicado.
+            </p>
         </div>
-        
+
         <div class="section">
             <h2>Análise dos Índices</h2>
-            
+
             <h3>Anos Finais - IDEP 2023</h3>
-            <p>A unidade não possuía índice do IDEB do ano de 2023 e para avaliação do trabalho da diretora foram utilizados os dados do IDEP do mesmo ano. Nos anos finais, o IDEP da unidade foi de 3.5 e a Unidade ficou entre os 124 índices mais baixos da cidade.</p>
-            
+            <p>A unidade não possuía índice do IDEB do ano de 2023 e para avaliação do trabalho da diretora foram
+                utilizados os dados do IDEP do mesmo ano. Nos anos finais, o IDEP da unidade foi de 3.5 e a Unidade
+                ficou entre os 124 índices mais baixos da cidade.</p>
+
             <table class="data-table">
                 <caption>Classificação da Unidade no municipio em relação ao IDEP dos anos Finais (2023)</caption>
                 <thead>
@@ -290,10 +336,11 @@ body {
                     </tr>
                 </tbody>
             </table>
-            
+
             <h3>Anos Iniciais - IDEB 2023</h3>
-            <p>Se olharmos para o IDEB de 2023 para os anos iniciais, observamos a unidade entre os 43 índices mais baixos. Ainda bem longe do número de unidades que a gestão julgou necessária a intervenção.</p>
-            
+            <p>Se olharmos para o IDEB de 2023 para os anos iniciais, observamos a unidade entre os 43 índices mais
+                baixos. Ainda bem longe do número de unidades que a gestão julgou necessária a intervenção.</p>
+
             <table class="data-table">
                 <caption>Classificação da Unidade no municipio em relação ao IDEB dos anos iniciais (2023)</caption>
                 <thead>
@@ -313,141 +360,500 @@ body {
                     </tr>
                 </tbody>
             </table>
-            
-            <p>Dessa forma, a não ser que existam outros critérios não mencionados pela gestão municipal, o uso desses índices não justificaria a entrada da unidade na referida lista.</p>
+
+            <p>Dessa forma, a não ser que existam outros critérios não mencionados pela gestão municipal, o uso desses
+                índices não justificaria a entrada da unidade na referida lista.</p>
         </div>
-        
+
         <div class="section">
             <h2>Análise Detalhada dos Indicadores</h2>
-            <p>Ao analisarmos mais profundamente o IDEP, temos algumas observações bem relevantes que denotam o quanto a gestão municipal mostra ineficácia, mesmo no uso arbitrário dos índices como ferramenta para avaliação do trabalho dos gestores.</p>
-            
+            <p>Ao analisarmos mais profundamente o IDEP, temos algumas observações bem relevantes que denotam o quanto a
+                gestão municipal mostra ineficácia, mesmo no uso arbitrário dos índices como ferramenta para avaliação
+                do trabalho dos gestores.</p>
+
             <h3>Evolução Temporal</h3>
             <p>O IDEP da unidade seguiu uma linha de avanço nos últimos anos, acompanhando a rede como um todo.</p>
-            
+
             <div class="image">
                 <img src="evolucao.png" alt="Evolução IDEP ao longo dos anos - Tendência de crescimento">
             </div>
-            
+
             <h3>Comparação com a Rede Municipal</h3>
-            <p>Em comparação com a média das demais Unidades Educacionais, a Unidade apresentou um avanço maior que a rede nos IDEP dos anos iniciais, indicador que apresentava maior fragilidade em 2023.</p>
+            <p>Em comparação com a média das demais Unidades Educacionais, a Unidade apresentou um avanço maior que a
+                rede nos IDEP dos anos iniciais, indicador que apresentava maior fragilidade em 2023.</p>
             <div class="image">
                 <img src="porcentagem.png" alt="Comparação IDEP - Unidade vs. Média da Rede">
             </div>
-            
+
             <h3>Comparação Territorial</h3>
-            <p>Se isolarmos a comparação às Unidades do Distrito da Vila Andrade, Unidades que atendem a população de Paraisópolis, podemos constatar ainda mais incoerência na decisão da gestão municipal.</p>
+            <p>Se isolarmos a comparação às Unidades do Distrito da Vila Andrade, Unidades que atendem a população de
+                Paraisópolis, podemos constatar ainda mais incoerência na decisão da gestão municipal.</p>
             <div class="image">
-                <img src="final_2024.png" alt="Comparação com a média do IDEP unidades do distrito Vila Andrade - Anos Finais">
+                <img src="final_2024.png"
+                    alt="Comparação com a média do IDEP unidades do distrito Vila Andrade - Anos Finais">
             </div>
-            <p><strong>Em 2024, a Unidade teve o índice maior que a média das Unidades do Distrito da Vila Andrade.</strong></p>
+            <p><strong>Em 2024, a Unidade teve o índice maior que a média das Unidades do Distrito da Vila
+                    Andrade.</strong></p>
             <div class="image">
-                <img src="inicial_2024.png" alt="Comparação com unidades a Média do distrito Vila Andrade - Anos Iniciais">
+                <img src="inicial_2024.png"
+                    alt="Comparação com unidades a Média do distrito Vila Andrade - Anos Iniciais">
             </div>
-            <p> <strong>Já para os anos iniciais, a Unidade se manteve próxima à média, em comparação às demais unidades do território.</strong></p>
+            <p> <strong>Já para os anos iniciais, a Unidade se manteve próxima à média, em comparação às demais unidades
+                    do território.</strong></p>
         </div>
-        
+
         <div class="section">
             <h2>Limitações dos Indicadores</h2>
-            <p>Ressaltamos que consideramos temerário o uso de índices arbitrários para avaliação do trabalho de um gestor, especialmente o IDEP que tem seu maior indicador nos dados da Prova São Paulo. Não precisamos dizer o quanto é deficitária a estrutura para aplicação da avaliação, seja ela digital ou física.</p>
-            
-            <p> Em 2024, por exemplo, a Unidade optou pela realização da avaliação física, após o fiasco da prova digital em 2023. Apesar dos significativos avanços em relação ao ano anterior, em 2024 ainda tivemos muitos problemas, desde a chegada tardia dos materiais, até a ausência do coordenador da aplicação contratado por SME em quase todos os dias de prova.</p>
 
-            <p>Além disso, a Prova São Paulo não considera as especificidades dos territórios, como a alta rotatividade de servidores, a falta de recursos humanos em setores essenciais como limpeza e apoio pedagógico, e outros desafios estruturais que impactam diretamente o trabalho dos gestores.</p>  
-        
+            <p>Ressaltamos que consideramos temerário o uso de índices arbitrários para avaliação do trabalho de um
+                gestor, especialmente o IDEP que tem seu maior indicador nos dados da Prova São Paulo. Não precisamos
+                dizer o quanto é deficitária a estrutura para aplicação da avaliação, seja ela digital ou física.</p>
+
+            <p> Em 2024, por exemplo, a Unidade optou pela realização da avaliação física, após o fiasco da prova
+                digital em 2023. Apesar dos significativos avanços em relação ao ano anterior, em 2024 ainda tivemos
+                muitos problemas, desde a chegada tardia dos materiais, até a ausência do coordenador da aplicação
+                contratado por SME em quase todos os dias de prova.</p>
+
+            <p>Além disso, a Prova São Paulo não considera as especificidades dos territórios, como a alta rotatividade
+                de servidores, a falta de recursos humanos em setores essenciais como limpeza e apoio pedagógico, e
+                outros desafios estruturais que impactam diretamente o trabalho dos gestores.</p>
+
         </div>
-        <div class="section">
-            <h2>Fatores Socioeconômicos</h2>
-            <p> Um dado importante que parece não ter sido considerado, para além de tudo que foi apontado anteriormente é a vulnerabilidade social do território. A Unidade é trigessíma escola da cidade com maior número de estudantes com cadastro no bolsa familia </p>
 
-            <p> Já em relação à DRE Butantã, a unidade é a escola com mais estudantes participantes do programa, conforme tabela abaixo</p>
-            
-            <table class="data-table">
-                <caption>Número de estudantes beneficiários do programa bolsa familia nas Unidade da DRE Butantã</caption>
+        <div class="section">
+
+            <h2>Indicadores de Vulnerabilidade Social</h2>
+
+            <p>Um dado de extrema importância que parece não ter sido devidamente considerado na avaliação é a
+                <strong>vulnerabilidade social do território</strong>, diretamente refletida na quantidade de estudantes
+                beneficiários do programa Bolsa Família. Esses indicadores são cruciais, pois revelam não apenas o
+                tamanho da escola em relação às demais unidades de ensino fundamental, mas, principalmente, a realidade
+                socioeconômica dos estudantes e de suas famílias.
+            </p>
+
+
+            <p>A CEU EMEF Paraisópolis, por exemplo, destaca-se como a <strong>trigésima escola da cidade com o maior
+                    número
+                    de estudantes com cadastro no Bolsa Família</strong>.</p>
+
+            <table class="data-table large-table">
+                <caption>Escola da cidades com maior número de etudantes beneficiários do Bolsa Familia</caption>
                 <thead>
                     <tr>
+                        <th>Índice</th>
+                        <th>Tipo</th>
                         <th>Unidade</th>
-                        <th>Estudantes que recebem beneficio</th>
                         <th>Diretoria</th>
+                        <th>Estudantes Beneficiários do Programa</th>
                     </tr>
-                    <tr><td>PARAISOPOLIS</td><td>537</td><td>BUTANTA</td></tr>
-                    <tr><td>PERIMETRAL</td><td>529</td><td>BUTANTA</td></tr>
-                    <tr><td>VEREMUNDO TOTH, DOM</td><td>419</td><td>BUTANTA</td></tr>
-                    <tr><td>CESAR ARRUDA CASTANHO, DEP.</td><td>402</td><td>BUTANTA</td></tr>
-                    <tr><td>VIANNA MOOG</td><td>354</td><td>BUTANTA</td></tr>
-                    <tr><td>JOSE DE ALCANTARA MACHADO FILHO</td><td>349</td><td>BUTANTA</td></tr>
-                    <tr><td>ROBERTO MANGE, PROF.</td><td>344</td><td>BUTANTA</td></tr>
-                    <tr><td>THEODOMIRO DIAS, DES.</td><td>343</td><td>BUTANTA</td></tr>
-                    <tr><td>LUIZ EDUARDO MATARAZZO, CDE.</td><td>332</td><td>BUTANTA</td></tr>
-                    <tr><td>IBRAHIM NOBRE</td><td>323</td><td>BUTANTA</td></tr>
-                    <tr><td>JARDIM PAULO VI</td><td>305</td><td>BUTANTA</td></tr>
-                    <tr><td>TARSILA DO AMARAL</td><td>304</td><td>BUTANTA</td></tr>
-                    <tr><td>PAULO FREIRE, PROF.</td><td>302</td><td>BUTANTA</td></tr>
-                    <tr><td>DAISY AMADIO FUJIWARA, PROFA.</td><td>293</td><td>BUTANTA</td></tr>
-                    <tr><td>JOSE DIAS DA SILVEIRA, DR.</td><td>291</td><td>BUTANTA</td></tr>
-                    <tr><td>BRASIL-JAPAO</td><td>290</td><td>BUTANTA</td></tr>
-                    <tr><td>FRANCISCO REBOLO</td><td>285</td><td>BUTANTA</td></tr>
-                    <tr><td>ALVARO SILVA BRAGA, GEN.</td><td>283</td><td>BUTANTA</td></tr>
-                    <tr><td>JOAO XXIII</td><td>283</td><td>BUTANTA</td></tr>
-                    <tr><td>ARTHUR WHITAKER, DES.</td><td>268</td><td>BUTANTA</td></tr>
-                    <tr><td>BUTANTA</td><td>267</td><td>BUTANTA</td></tr>
-                    <tr><td>DEODORO DA FONSECA, MAL.</td><td>261</td><td>BUTANTA</td></tr>
-                    <tr><td>ALCIDES GONCALVES ETCHEGOYEN, GEN.</td><td>257</td><td>BUTANTA</td></tr>
-                    <tr><td>EUCLYDES DE OLIVEIRA FIGUEIREDO, GEN.</td><td>241</td><td>BUTANTA</td></tr>
-                    <tr><td>JULIO MESQUITA</td><td>237</td><td>BUTANTA</td></tr>
-                    <tr><td>EDA TEREZINHA CHICA MEDEIROS, PROFA.</td><td>233</td><td>BUTANTA</td></tr>
-                    <tr><td>SOLANO TRINDADE</td><td>223</td><td>BUTANTA</td></tr>
-                    <tr><td>ALIPIO ANDRADA SERPA, TTE.</td><td>220</td><td>BUTANTA</td></tr>
-                    <tr><td>MARIA ALICE BORGES GHION, PROFA.</td><td>205</td><td>BUTANTA</td></tr>
-                    <tr><td>PEDRO NAVA</td><td>203</td><td>BUTANTA</td></tr>
-                    <tr><td>LUIZ CINTRA DO PRADO, PROF.</td><td>198</td><td>BUTANTA</td></tr>
-                    <tr><td>ALIPIO CORREA NETO, PROF.</td><td>193</td><td>BUTANTA</td></tr>
-                    <tr><td>ADALGIZA SEGURADO DA SILVEIRA, PROFA.</td><td>192</td><td>BUTANTA</td></tr>
-                    <tr><td>TEOFILO BENEDITO OTTONI</td><td>170</td><td>BUTANTA</td></tr>
-                    <tr><td>VILA MUNCK</td><td>153</td><td>BUTANTA</td></tr>
-                    <tr><td>EDUCANDARIO DOM DUARTE, ANEXA AO</td><td>130</td><td>BUTANTA</td></tr>
-                    <tr><td>ILEUSA CAETANO DA SILVA, PROFA.</td><td>105</td><td>BUTANTA</td></tr>
-                    <tr><td>AMORIM LIMA, DES.</td><td>102</td><td>BUTANTA</td></tr>
-                    <tr><td>MARIA ANTONIETA D'ALKIMIN BASTO, PROFA.</td><td>83</td><td>BUTANTA</td></tr>
-                    <tr><td>OLAVO PEZZOTTI, PROF.</td><td>72</td><td>BUTANTA</td></tr>
                 </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>EMEF</td>
+                        <td>PAULO CARNEIRO THOMAZ ALVES, GEN.</td>
+                        <td>JACANA/TREMEMBE</td>
+                        <td>734</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>EMEF</td>
+                        <td>FELICIO PAGLIUSO, PROF.</td>
+                        <td>SAO MATEUS</td>
+                        <td>690</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>CEU EMEF</td>
+                        <td>VILA DO SOL</td>
+                        <td>CAMPO LIMPO</td>
+                        <td>672</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>EMEF</td>
+                        <td>TERESA MARGARIDA DA SILVA E ORTA</td>
+                        <td>CAMPO LIMPO</td>
+                        <td>668</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>EMEF</td>
+                        <td>MEIRE DE JESUS RIBEIRO, PROF.</td>
+                        <td>GUAIANASES</td>
+                        <td>656</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>CEU EMEF</td>
+                        <td>ALTO ALEGRE</td>
+                        <td>SAO MATEUS</td>
+                        <td>639</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>EMEF</td>
+                        <td>JULIO DE GRAMMONT</td>
+                        <td>SAO MATEUS</td>
+                        <td>635</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>EMEF</td>
+                        <td>ANTONIO DE SAMPAIO DORIA, PROF.</td>
+                        <td>SANTO AMARO</td>
+                        <td>628</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>CEU EMEF</td>
+                        <td>TEOTONIO VILELA, SEN.</td>
+                        <td>FREGUESIA/BRASILANDIA</td>
+                        <td>602</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>EMEF</td>
+                        <td>HIPOLITO JOSE DA COSTA</td>
+                        <td>JACANA/TREMEMBE</td>
+                        <td>602</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>EMEF</td>
+                        <td>SUD MENNUCCI</td>
+                        <td>SAO MIGUEL</td>
+                        <td>589</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>EMEF</td>
+                        <td>CECILIA MORAES DE VASCONCELOS, PROFA.</td>
+                        <td>FREGUESIA/BRASILANDIA</td>
+                        <td>588</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>EMEF</td>
+                        <td>RECANTO DOS HUMILDES</td>
+                        <td>PIRITUBA</td>
+                        <td>585</td>
+                    </tr>
+                    <tr>
+                        <td>14</td>
+                        <td>EMEF</td>
+                        <td>MAILSON DELANE, PROF.</td>
+                        <td>GUAIANASES</td>
+                        <td>584</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>EMEF</td>
+                        <td>JOSE CARLOS NICOLETO - ZITO, PROFESSOR</td>
+                        <td>SAO MATEUS</td>
+                        <td>581</td>
+                    </tr>
+                    <tr>
+                        <td>16</td>
+                        <td>EMEF</td>
+                        <td>AMELIA RODRIGUES DE OLIVEIRA, PROFA</td>
+                        <td>SANTO AMARO</td>
+                        <td>580</td>
+                    </tr>
+                    <tr>
+                        <td>17</td>
+                        <td>EMEF</td>
+                        <td>JOAO AMOS COMENIUS</td>
+                        <td>FREGUESIA/BRASILANDIA</td>
+                        <td>579</td>
+                    </tr>
+                    <tr>
+                        <td>18</td>
+                        <td>EMEF</td>
+                        <td>JARDIM FONTALIS</td>
+                        <td>JACANA/TREMEMBE</td>
+                        <td>575</td>
+                    </tr>
+                    <tr>
+                        <td>19</td>
+                        <td>EMEF</td>
+                        <td>ANNA LAMBERGA ZEGLIO, VER.</td>
+                        <td>GUAIANASES</td>
+                        <td>572</td>
+                    </tr>
+                    <tr>
+                        <td>20</td>
+                        <td>EMEF</td>
+                        <td>CLEMENTE PASTORE, PROF.</td>
+                        <td>CAMPO LIMPO</td>
+                        <td>569</td>
+                    </tr>
+                    <tr>
+                        <td>21</td>
+                        <td>EMEF</td>
+                        <td>SATURNINO PEREIRA</td>
+                        <td>GUAIANASES</td>
+                        <td>567</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>EMEFM</td>
+                        <td>OSWALDO ARANHA BANDEIRA DE MELLO</td>
+                        <td>GUAIANASES</td>
+                        <td>567</td>
+                    </tr>
+                    <tr>
+                        <td>23</td>
+                        <td>EMEF</td>
+                        <td>THEREZA MACIEL DE PAULA, PROFA.</td>
+                        <td>SAO MATEUS</td>
+                        <td>564</td>
+                    </tr>
+                    <tr>
+                        <td>24</td>
+                        <td>EMEF</td>
+                        <td>EDIVALDO DOS SANTOS DANTAS, PROF.</td>
+                        <td>CAMPO LIMPO</td>
+                        <td>563</td>
+                    </tr>
+                    <tr>
+                        <td>25</td>
+                        <td>CEU EMEF</td>
+                        <td>CONCEICAO APARECIDA DE JESUS, PROFA.</td>
+                        <td>ITAQUERA</td>
+                        <td>563</td>
+                    </tr>
+                    <tr>
+                        <td>26</td>
+                        <td>EMEF</td>
+                        <td>ROMAO GOMES, CEL.</td>
+                        <td>JACANA/TREMEMBE</td>
+                        <td>562</td>
+                    </tr>
+                    <tr>
+                        <td>27</td>
+                        <td>CEU EMEF</td>
+                        <td>JACANA</td>
+                        <td>JACANA/TREMEMBE</td>
+                        <td>559</td>
+                    </tr>
+                    <tr>
+                        <td>28</td>
+                        <td>EMEF</td>
+                        <td>ARY GOMES, CEL.</td>
+                        <td>JACANA/TREMEMBE</td>
+                        <td>557</td>
+                    </tr>
+                    <tr>
+                        <td>29</td>
+                        <td>EMEF</td>
+                        <td>MARIA APARECIDA VILASBOAS, PROFA.</td>
+                        <td>SAO MATEUS</td>
+                        <td>549</td>
+                    </tr>
+                    <tr>
+                        <td>30</td>
+                        <td>CEU EMEF</td>
+                        <td>PARAISOPOLIS</td>
+                        <td>BUTANTA</td>
+                        <td>537</td>
+                    </tr>
+                </tbody>
             </table>
-            
-            <p>A unidade não é só a escola com mais estudantes beneficiários do programa. O número de matriculas do ensino fundamental é mais que o dobro da média das outras Unidades do Território</p>
+
 
             <div class="image">
-                <img src="media_bolsa_bt.png" alt="Comparação do número de estudantes beneficiários do programa bolsa familia da Unidade com a média da DRE Butantã">
+                <img src="media_bolsa_cidade.png"
+                    alt="Comparação do número de estudantes beneficiários do programa bolsa familia da Unidade com a média da Cidade">
             </div>
 
-        </div>
-        
-        <div class="conclusion-box">
-            <h2>Conclusão</h2>
-            <p>
-            A análise dos indicadores utilizados pela gestão municipal para justificar a suposta ineficiência da gestão escolar revela-se frágil e inadequada, especialmente no contexto desta unidade. Esses indicadores desconsideram uma série de fatores que impactam diretamente o trabalho dos gestores, como a alta rotatividade de servidores — reflexo do fato de que esta unidade possui o maior índice de Gratificação por Local de Trabalho (GLT) —, a ausência de recursos humanos em diversos setores, incluindo limpeza, além de outros desafios estruturais que tornam a gestão extremamente complexa.
-            </p>
+            <p>Quando analisamos a DRE Butantã, a situação é ainda mais
+                notória: nossa unidade é a <strong>escola com mais estudantes participantes do programa</strong>dentro
+                dessa
+                Diretoria Regional de Educação.</p>
 
-            <p>
-            A utilização arbitrária e descontextualizada desses indicadores não apenas é injusta, como também pouco contribui para a melhoria da aprendizagem, pois ignora as especificidades dos territórios e parte de uma falsa premissa de igualdade de condições entre as escolas.
-            </p>
+            <table class="data-table large-table">
+                <caption>Unidades com mais de 300 estudantes beneficiários do Bolsa Familia na DRE Butantã</caption>
+                <thead>
+                    <tr>
+                        <th>Índice</th>
+                        <th>Tipo</th>
+                        <th>Unidade</th>
+                        <th>Diretoria</th>
+                        <th>Estudantes Beneficiários do Programa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>CEU EMEF</td>
+                        <td>PARAISOPOLIS</td>
+                        <td>BUTANTA</td>
+                        <td>537</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>EMEF</td>
+                        <td>PERIMETRAL</td>
+                        <td>BUTANTA</td>
+                        <td>529</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>EMEF</td>
+                        <td>VEREMUNDO TOTH, DOM</td>
+                        <td>BUTANTA</td>
+                        <td>419</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>CEU EMEF</td>
+                        <td>CESAR ARRUDA CASTANHO, DEP.</td>
+                        <td>BUTANTA</td>
+                        <td>402</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>EMEF</td>
+                        <td>VIANNA MOOG</td>
+                        <td>BUTANTA</td>
+                        <td>354</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>EMEF</td>
+                        <td>JOSE DE ALCANTARA MACHADO FILHO</td>
+                        <td>BUTANTA</td>
+                        <td>349</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>EMEF</td>
+                        <td>ROBERTO MANGE, PROF.</td>
+                        <td>BUTANTA</td>
+                        <td>344</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>EMEF</td>
+                        <td>THEODOMIRO DIAS, DES.</td>
+                        <td>BUTANTA</td>
+                        <td>343</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>EMEF</td>
+                        <td>LUIZ EDUARDO MATARAZZO, CDE.</td>
+                        <td>BUTANTA</td>
+                        <td>332</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>EMEF</td>
+                        <td>IBRAHIM NOBRE</td>
+                        <td>BUTANTA</td>
+                        <td>323</td>
+                    </tr>
+                    <tr>
+                        <td>11</td>
+                        <td>EMEF</td>
+                        <td>JARDIM PAULO VI</td>
+                        <td>BUTANTA</td>
+                        <td>305</td>
+                    </tr>
+                    <tr>
+                        <td>12</td>
+                        <td>EMEF</td>
+                        <td>TARSILA DO AMARAL</td>
+                        <td>BUTANTA</td>
+                        <td>304</td>
+                    </tr>
+                    <tr>
+                        <td>13</td>
+                        <td>EMEF</td>
+                        <td>PAULO FREIRE, PROF.</td>
+                        <td>BUTANTA</td>
+                        <td>302</td>
+                    </tr>
+                </tbody>
+            </table>
 
-            <p>
-            Diante desse cenário, fica evidente que a suposta "incompetência" na leitura dos dados por parte da gestão municipal, na verdade, escancara um projeto mais amplo: a implementação acelerada de processos de privatização. Esse movimento se inicia com a contratação de "empresas especializadas" para a formação de gestores, avança para modelos de gestão terceirizada nas unidades escolares e culmina na transferência direta da atividade-fim — o ensino — para empresas privadas. Trata-se do mesmo modelo já aplicado na saúde e na assistência social, cujos resultados foram retrocessos significativos e o aprofundamento da precarização dos serviços prestados à população.
-            </p>
 
-            <p>
-            Portanto, o debate sobre indicadores, metas e a adoção de metodologias da gestão ágil, associado à crescente burocratização da formação dos gestores, não se configura como um simples equívoco de percurso. Pelo contrário, faz parte de um projeto deliberado, cujo objetivo central não é a melhoria da educação pública, mas sim a sua transformação em mercadoria — e, consequentemente, a busca incessante pelo lucro.
-            </p>
+            <p>A unidade não é só a escola com mais estudantes beneficiários do programa. O número de matriculas do
+                ensino fundamental é mais que o dobro da média das outras Unidades do Território</p>
+
+            <div class="image">
+                <img src="media_bolsa_bt.png"
+                    alt="Comparação do número de estudantes beneficiários do programa bolsa familia da Unidade com a média da DRE Butantã">
+            </div>
+
+            <p> Os dados referente aos estudantes beneficiários dos programa são de julho de 2024 e foram obtidos no
+                portal <a href="http://dados.prefeitura.sp.gov.br/dataset" target="_blank">Dados Abertos da
+                    Prefeitura
+                    de São Paulo</a></p>
+
+            <div class="conclusion-box">
+                <h2>Conclusão</h2>
+                <p>
+                    A análise dos indicadores utilizados pela gestão municipal para justificar a suposta ineficiência da
+                    gestão escolar revela-se frágil e inadequada, especialmente no contexto desta unidade. Esses
+                    indicadores
+                    desconsideram uma série de fatores que impactam diretamente o trabalho dos gestores, como a alta
+                    rotatividade de servidores — reflexo do fato de que esta unidade possui o maior índice de
+                    Gratificação
+                    por Local de Trabalho (GLT) —, a ausência de recursos humanos em diversos setores, incluindo
+                    limpeza,
+                    além de outros desafios estruturais que tornam a gestão extremamente complexa.
+                </p>
+
+                <p>
+                    A utilização arbitrária e descontextualizada desses indicadores não apenas é injusta, como também
+                    pouco
+                    contribui para a melhoria da aprendizagem, pois ignora as especificidades dos territórios e parte de
+                    uma
+                    falsa premissa de igualdade de condições entre as escolas.
+                </p>
+
+                <p>
+                    Diante desse cenário, fica evidente que a suposta "incompetência" na leitura dos dados por parte da
+                    gestão municipal, na verdade, escancara um projeto mais amplo: a implementação acelerada de
+                    processos de
+                    privatização. Esse movimento se inicia com a contratação de "empresas especializadas" para a
+                    formação de
+                    gestores, avança para modelos de gestão terceirizada nas unidades escolares e culmina na
+                    transferência
+                    direta da atividade-fim — o ensino — para empresas privadas. Trata-se do mesmo modelo já aplicado na
+                    saúde e na assistência social, cujos resultados foram retrocessos significativos e o aprofundamento
+                    da
+                    precarização dos serviços prestados à população.
+                </p>
+
+                <p>
+                    Portanto, o debate sobre indicadores, metas e a adoção de metodologias da gestão ágil, associado à
+                    crescente burocratização da formação dos gestores, não se configura como um simples equívoco de
+                    percurso. Pelo contrário, faz parte de um projeto deliberado, cujo objetivo central não é a melhoria
+                    da
+                    educação pública, mas sim a sua transformação em mercadoria — e, consequentemente, a busca
+                    incessante
+                    pelo lucro.
+                </p>
+            </div>
+
+            <div class="highlight-box" style="background: #dbeafe; border: 1px solid #3b82f6;">
+                <p style="color: #1e40af; font-weight: 600;">📊 Análises Técnicas Disponíveis</p>
+                <p style="color: #1e40af; margin-top: 8px;">Veja as análises completas usando Python e visualizações de
+                    dados no repositório:</p>
+                <p style="color: #1e40af; margin-top: 8px;"><a href="https://github.com/Rjj18/analise_idep"
+                        style="color: #1d4ed8; text-decoration: underline;">https://github.com/Rjj18/analise_idep</a>
+                </p>
+            </div>
+
+            <div class="footer">
+                <p>Análise elaborada com os dados da Plataforma de dados abertos | Equipe Gestora CEU EMEF Paraisópolis
+                    2025
+                </p>
+            </div>
         </div>
-        
-        <div class="highlight-box" style="background: #dbeafe; border: 1px solid #3b82f6;">
-            <p style="color: #1e40af; font-weight: 600;">📊 Análises Técnicas Disponíveis</p>
-            <p style="color: #1e40af; margin-top: 8px;">Veja as análises completas usando Python e visualizações de dados no repositório:</p>
-            <p style="color: #1e40af; margin-top: 8px;"><a href="https://github.com/Rjj18/analise_idep" style="color: #1d4ed8; text-decoration: underline;">https://github.com/Rjj18/analise_idep</a></p>
-        </div>
-        
-        <div class="footer">
-            <p>Análise elaborada com os dados da Plataforma de dados abertos | Equipe Gestora CEU EMEF Paraisópolis 2024</p>
-        </div>
-    </div>
 </body>
+
 </html>
